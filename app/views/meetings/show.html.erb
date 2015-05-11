@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @meeting.name %>
+</p>
+
+<p>
+  <b>Building:</b>
+  <%= @meeting.building %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @meeting.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @meeting.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @meeting.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @meeting.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @meeting.phone %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @meeting.country %>
+</p>
+
+<p>
+  <b>Meeting type:</b>
+  <%= @meeting.meeting_type %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @meeting.day %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @meeting.time %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @meeting.description %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @meeting.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @meeting.longitude %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @meeting.owner %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @meeting.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', meetings_path %>

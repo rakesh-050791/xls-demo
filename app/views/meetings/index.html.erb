@@ -1,0 +1,66 @@
+<%= form_tag import_meetings_path, multipart: true do %>
+      <%= label_tag :import_xls %>
+      <%= file_field_tag :file %>
+
+      <%= submit_tag "Import" %>
+<% end %>
+
+<h1>Listing meetings</h1>
+
+<p>
+  Download:
+  <%= link_to "CSV", meetings_path(format: "csv") %> |
+  <%= link_to "Excel", meetings_path(format: "xls") %>
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Building</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Country</th>
+    <th>Meeting type</th>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Description</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Owner</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meetings.each do |meeting| %>
+  <tr>
+    <td><%= meeting.name %></td>
+    <td><%= meeting.building %></td>
+    <td><%= meeting.address %></td>
+    <td><%= meeting.city %></td>
+    <td><%= meeting.state %></td>
+    <td><%= meeting.zip %></td>
+    <td><%= meeting.phone %></td>
+    <td><%= meeting.country %></td>
+    <td><%= meeting.meeting_type %></td>
+    <td><%= meeting.day %></td>
+    <td><%= meeting.time %></td>
+    <td><%= meeting.description %></td>
+    <td><%= meeting.latitude %></td>
+    <td><%= meeting.longitude %></td>
+    <td><%= meeting.owner %></td>
+    <td><%= meeting.status %></td>
+    <td><%= link_to 'Show', meeting %></td>
+    <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+    <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meeting', new_meeting_path %>

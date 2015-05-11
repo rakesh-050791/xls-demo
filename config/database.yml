@@ -1,0 +1,18 @@
+ default: &default
+  adapter: mysql2
+  username: root
+  password: 
+  pool: 5
+  timeout: 5000
+
+development:
+  database: xls-demo_dev
+  <<: *defaults
+
+test:
+  database: xls-demo_test
+  <<: *defaults
+
+production:
+  database: xls-demo_production
+  <<: *defaults
