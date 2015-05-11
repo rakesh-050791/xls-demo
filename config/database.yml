@@ -1,7 +1,7 @@
  default: &default
   adapter: mysql2
-  username: root
-  password: 
+  username: adminCThVdNL
+  password: 6dCRuCg9NeeA
   pool: 5
   timeout: 5000
 
@@ -14,5 +14,5 @@ test:
   <<: *defaults
 
 production:
-  database: xls-demo_production
+  database: xlsdemo
   <<: *defaults
