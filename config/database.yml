@@ -1,23 +1,24 @@
- default: &default
-  adapter: mysql2
-  encoding: utf8
-  username: adminCThVdNL
-  password: 6dCRuCg9NeeA
-  host: 127.0.0.1
-  port: 3306
-  pool: 5
-  timeout: 5000
-  socket: /tmp/mysql.sock
-
-
 development:
-  database: xls-demo_dev
-  <<: *defaults
+ adapter: mysql2
+ encoding: utf8
+ database: import_export_development
+ pool: 5
+ username: root
+ password:
 
 test:
-  database: xls-demo_test
-  <<: *defaults
+ adapter: mysql2
+ encoding: utf8
+ database: import_export_test
+ pool: 5
+ username: root
+ password:
+
 
 production:
-  database: xlsdemo
-  <<: *defaults
+ adapter: mysql2
+ encoding: utf8
+ database: xlsdemo
+ pool: 5
+ username: adminCThVdNL
+ password: 6dCRuCg9NeeA
