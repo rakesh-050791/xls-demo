@@ -20,5 +20,6 @@ production:
  encoding: utf8
  database: xlsdemo
  pool: 5
+ host: 127.0.0.1
  username: adminCThVdNL
  password: 6dCRuCg9NeeA
